@@ -4,7 +4,12 @@
         "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-event/erkendestandaard/2021-04-22/context/cultureel-erfgoed-event-ap.jsonld",
         "https://cidoc-crm.org/cidoc-crm/7.1.1/json-ld_context.jsonld",
         {
-            "label": "http://www.w3.org/2000/01/rdf-schema#label"
+            "label": "http://www.w3.org/2000/01/rdf-schema#label",
+            "Agent.rol": {
+                "@container": "@set",
+                "@id": "http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_role_of",
+                "@type": "@id"
+            }
         }
     ],
     "@type": "MensgemaaktObject",

@@ -3,7 +3,12 @@
         "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/erkendestandaard/2021-04-22/context/cultureel-erfgoed-object-ap.jsonld",
         "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-event/erkendestandaard/2021-04-22/context/cultureel-erfgoed-event-ap.jsonld",
         {
-            "rdfs": "http://www.w3.org/2000/01/rdf-schema"
+            "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+            "Agent.rol": {
+                "@container": "@set",
+                "@id": "Rol.rol",
+                "@type": "@id"
+            }
         }
     ],
     "@id": "is er een PID voor dit object?",
@@ -59,12 +64,20 @@
             "@id": "http://www.wikidata.org/entity/Q47208588",
             "@type": "Persoon",
             "Persoon.achternaam": "De Bruyker",
-            "Persoon.voornaam": "Luk"
+            "Persoon.voornaam": "Luk",
+            "Agent.rol": [{
+                "@type": "TypeRol",
+                "@value": "ontwerper"
+            }]
         },{
             "@id": "https://www.wikidata.org/entity/Q52185469",
             "@type": "Persoon",
             "Persoon.achternaam": "De Strooper",
-            "Persoon.voornaam": "Dirk"
+            "Persoon.voornaam": "Dirk",
+            "Agent.rol": [{
+                "@type": "TypeRol",
+                "@value": "ontwerper"
+            }]
         }],
         "Gebeurtenis.tijd": "2008",
         "Gebeurtenis.plaats": {
