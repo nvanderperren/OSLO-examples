@@ -1,0 +1,76 @@
+{
+    "@context": [
+        "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/erkendestandaard/2021-04-22/context/cultureel-erfgoed-object-ap.jsonld",
+        "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-event/erkendestandaard/2021-04-22/context/cultureel-erfgoed-event-ap.jsonld",
+        {
+            "rdfs": "http://www.w3.org/2000/01/rdf-schema"
+        }
+    ],
+    "@id": "is er een PID voor dit object?",
+    "@type": "MensgemaaktObject",
+    "MaterieelDing.beheerder": [{
+        "@id": "https://www.wikidata.org/entity/Q2358158",
+        "type": "Organisatie",
+        "Organisatie.voorkeursnaam": [{
+            "@value": "Huis van Alijn",
+            "@language": "nl"
+        }],
+        "Entiteit.identificator": [{
+            "@type": "Identificator",
+            "Identificator.identificator": {
+                "@value": "https://www.wikidata.org/entity/Q2358158",
+                "@type": "https://www.wikidata.org/entity/Q43649390"
+            }
+        }]
+    }],
+    "MensgemaaktObject.maaktDeelUitVan": [{
+        "@type": "GecureerdeCollectie",
+        "Collectie.naam": [{
+            "@value": "Poppenspel",
+            "@language": "nl"
+        }]
+    }],
+    "Entiteit.identificator": {
+        "@type": "Identificator",
+        "Identificator.identificator": {
+            "@value": "2022-029-193",
+            "@type": "https://www.wikidata.org/entity/Q1417099"
+        }
+    },
+    "Entiteit.classificatie": [{
+        "@type": "Classificatie",
+        "Classificatie.toegekendType": [{
+            "@type": "TypeEntiteit",
+            "@id": "http://vocab.getty.edu/page/aat/300226128",
+            "rdfs:label": "stokpop"
+        }]
+    }],
+    "MensgemaaktObject.titel": [{
+        "@value": "Stokpop met masker en rode lingerie",
+        "@language": "nl"
+    }],
+    "Entiteit.beschrijving": [{
+        "@value": "Don G. is een muziekvoorstelling van Theater Taptoe uit 2006. Als artistiek leider legt Freek Neirynck voornamelijk de focus op teksttheater. Na zijn vertrek in 2003 nemen Luk De Bruyker en Dirk De Strooper de artistieke                         leiding over. In die periode wordt alsmaar meer voor muziektheater gekozen, deels uit interesse, deels onder druk van toenmalig minister van cultuur Bert Anciaux die wil dat Taptoe zich herbront. Don G. is de eerste in een lange reeks samenwerkingen met blazersensemble I Solisti del Vento. Het stuk Don G. is een bewerking van de opera Don Giovanni van Wolfgang Amadeus Mozart. Het stuk wordt ingekort en de locatie verplaatst naar het Venetië van Casanova en Pulcinella, met de personages Don Giovanni en Leporello.",
+        "@language": "nl"
+    }],
+    "MaterieelDing.productie": {
+        "@type": "Productie",
+        "Activiteit.uitgevoerdDoor": [{
+            "@id": "http://www.wikidata.org/entity/Q47208588",
+            "@type": "Persoon",
+            "Persoon.achternaam": "De Bruyker",
+            "Persoon.voornaam": "Luk"
+        },{
+            "@id": "https://www.wikidata.org/entity/Q52185469",
+            "@type": "Persoon",
+            "Persoon.achternaam": "De Strooper",
+            "Persoon.voornaam": "Dirk"
+        }],
+        "Gebeurtenis.tijd": "2008",
+        "Gebeurtenis.plaats": {
+            "@type": "Locatie",
+            "@value": "Gent"
+        }
+    }
+    
+}
