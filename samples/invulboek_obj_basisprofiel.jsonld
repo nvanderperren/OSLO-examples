@@ -9,7 +9,8 @@
                 "@container": "@set",
                 "@id": "Rol.rol",
                 "@type": "@id"
-            }
+            },
+            "voorkeursnaam": "http://www.w3.org/2004/02/skos/core#prefLabel"
         }
     ],
     "@type": "MensgemaaktObject",
@@ -33,9 +34,13 @@
         "@value": "Portret van Marguerite van Mons",
         "@language": "nl"
     }],
-    "MensgemaaktObject.type": {
+    "Entiteit.type": {
+        "@type": "TypeEntiteit",
         "@id": "http://vocab.getty.edu/aat/300033618",
-        "label": "schilderingen"
+        "voorkeursnaam": {
+            "@value": "schilderingen",
+            "@language": "nl"
+        }
     },
     "MaterieelDing.beheerder": [{
         "@id": "http://www.wikidata.org/entity/Q2365880",
@@ -46,30 +51,16 @@
     }],
     "MensgemaaktObject.locatie": [{
         "@type": "Locatie",
-        "Entiteit.identificator": [{
-            "@type": "Identificator",
-            "Identificator.identificator": {
-                "@type": "hier moet een uri komen",
-                "@value": "A-594-C"
-            },
-            "Identificator.toegekendDoor": {
-                "@type": "Organisatie",
-                "@id": "http://www.wikidata.org/entity/Q2365880"
-            }
-
-        }]
+        "@value": "A-594-C"
     }],
     "Entiteit.beschrijving": [{
         "@value": "Portret van een 10-jarige meisje genaamd, kort na de dood van haar moeder. Olie op doek schilderij van de Belgische schilder Théo van Rysselberghe.",
         "@language": "nl"
     }],
     "MensgemaaktObject.materiaal": [{
+        "@type": "TypeMateriaal",
         "@id": "http://vocab.getty.edu/aat/300015050",
-        "label": "olieverf",
-        "Entiteit.identificator": [{
-            "@type": "Identificator",
-            "Identificator.toegekendDoor (String)": "AAT"
-        }]
+        "voorkeursnaam": "olieverf"
     }],
     "MensgemaaktObject.dimensie": [{
         "@type": "Dimensie",
@@ -81,8 +72,7 @@
         "@type": "Conditie",
         "Conditie.type": {
             "@type": "TypeConditie",
-            "@id": "dit moet een SKOS concept zijn",
-            "label": "goed"
+            "voorkeurslabel": "goed"
         }
     }],
     "MaterieelDing.isOvergedragenBijVerwerving": [{
@@ -120,8 +110,9 @@
         "Werk.gaatOver": [{
             "@type": "Entiteit",
             "Entiteit.type": [{
+                "@type": "TypeEntiteit",
                 "@id": "http://www.iconclass.org/rkd/31D112%28%2B1%29/",
-                "label": "kind (vooraanzicht)"
+                "voorkeursnaam": "kind (vooraanzicht)"
             }],
             "Entiteit.identificator": [{
                 "@type": "Identificator",
@@ -143,10 +134,11 @@
             "Gebeurtenis.tijd": "1886"
         }],
         "MensgemaaktObject.beeldtUit": [{
-                "@type": "Entiteit",
+                "@type": "Persoon",
                 "Entiteit.type": [{
+                    "@type": "TypeEntiteit",
                     "@id": "https://www.wikidata.org/entity/Q3031",
-                    "label": "meisje"
+                    "voorkeursnaam": "meisje"
                 }],
                 "identificator": [{
                     "@type": "Identificator",

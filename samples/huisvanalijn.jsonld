@@ -1,14 +1,14 @@
 {
     "@context": [
-        "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/erkendestandaard/2021-04-22/context/cultureel-erfgoed-object-ap.jsonld",
         "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-event/erkendestandaard/2021-04-22/context/cultureel-erfgoed-event-ap.jsonld",
+        "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/erkendestandaard/2021-04-22/context/cultureel-erfgoed-object-ap.jsonld",
         {
-            "rdfs": "http://www.w3.org/2000/01/rdf-schema",
             "Agent.rol": {
                 "@container": "@set",
                 "@id": "Rol.rol",
                 "@type": "@id"
-            }
+            },
+            "voorkeursnaam": "http://www.w3.org/2004/02/skos/core#prefLabel"
         }
     ],
     "@id": "is er een PID voor dit object?",
@@ -47,7 +47,10 @@
         "Classificatie.toegekendType": [{
             "@type": "TypeEntiteit",
             "@id": "http://vocab.getty.edu/page/aat/300226128",
-            "rdfs:label": "stokpop"
+            "voorkeursnaam": {
+                "@value": "stokpoppen",
+                "@language": "nl"
+            }
         }]
     }],
     "MensgemaaktObject.titel": [{
@@ -67,7 +70,11 @@
             "Persoon.voornaam": "Luk",
             "Agent.rol": [{
                 "@type": "TypeRol",
-                "@value": "ontwerper"
+                "@id": "https://id/vewijst/naar/thesaurus",
+                "voorkeursnaam": {
+                    "@value": "ontwerper",
+                    "@language": "nl"
+                }
             }]
         },{
             "@id": "https://www.wikidata.org/entity/Q52185469",
@@ -76,7 +83,11 @@
             "Persoon.voornaam": "Dirk",
             "Agent.rol": [{
                 "@type": "TypeRol",
-                "@value": "ontwerper"
+                "@id": "https:///id/verwijst/naar/thesaurus",
+                "voorkeursnaam": {
+                    "@value": "ontwerper",
+                    "@language": "nl"
+                }
             }]
         }],
         "Gebeurtenis.tijd": "2008",
