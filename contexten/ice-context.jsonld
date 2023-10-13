@@ -1,6 +1,6 @@
 {
     "@context": {
-        "crm": "https://cidoc-crm.org/rdfs/7.1.2/CIDOC_CRM_v7.1.2_JSON-LD_Context.jsonld",
+        "crm": "http://www.cidoc-crm.org/cidoc-crm/",
         "frbr": "http://iflastandards.info/ns/fr/frbr/frbroo#",
         "oslo": "https://data.vlaanderen.be/ns/cultureel-erfgoed/#",
         "wd": "http://www.wikidata.org/entity/",
