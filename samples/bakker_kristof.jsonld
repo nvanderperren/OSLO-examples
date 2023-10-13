@@ -1,0 +1,166 @@
+{
+  "@context": [
+    "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-event/erkendestandaard/2021-04-22/context/cultureel-erfgoed-event-ap.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/erkendestandaard/2021-04-22/context/cultureel-erfgoed-object-ap.jsonld",
+    "https://raw.githubusercontent.com/nvanderperren/OSLO-samples/master/contexten/ice-context.jsonld",
+    {
+      "voorkeursnaam": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "label": "http://www.w3.org/2000/01/rdf-schema#label"
+    }
+  ],
+  "@type": "Item",
+  "label": "Item",
+  "@id": "https://example.org/bakker-kristof-speculaas",
+  "MensgemaaktObject.titel": [
+    {
+      "@value": "speculaaskoeken zoals bakker Kristof ze maakt",
+      "@language": "nl"
+    }
+  ],
+  "Entiteit.beschrijving": [
+    {
+      "@value": "Bakker Kristof maakt heerlijke speculaas",
+      "@language": "nl"
+    }
+  ],
+  "wordtUitgedruktDoor": [
+    {
+      "@type": "Expressie",
+      "label": "Expressie",
+      "InformatieObject.titel": [
+        {
+          "@value": "de speculaasvormen gebruikt door bakker Kristof",
+          "@language": "nl"
+        }
+      ],
+      "wordtGedragenDoor": [
+        {
+          "@type": "MensgemaaktObject",
+          "label": "Mensgemaakt object",
+          "MensgemaaktObject.titel": "gietvormen voor speculaas",
+          "Entiteit.beschrijving": "deze gietvormen werden gebruikt bij de sessie in het bakkerijmuseum van Veurne waar bakker Kristof speculaas maakte",
+          "maaktDeelUitVan": [
+            {
+              "@type": "Collectie",
+              "label": "Collectie",
+              "GecureerdeCollectie.titel": [
+                {
+                  "@value": "Museumcollectie van het Bakkerijmuseum",
+                  "@language": "nl"
+                }
+              ],
+              "GecureerdeCollectie.curator": [
+                {
+                  "@type": "Persoon",
+                  "label": "Persoon",
+                  "Persoon.voornaam": [
+                    "Kris"
+                  ],
+                  "Persoon.achternaam": "Curator"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Expressie",
+      "label": "Expressie",
+      "InformatieObject.titel": [
+        {
+          "@value": "De speculaaskoeken gemaakt door bakker Kristof",
+          "@language": "nl"
+        }
+      ],
+      "wordtUitgevoerdIn": {
+        "@type": "Voorstelling",
+        "label": "Voorstelling",
+        "Entiteit.beschrijving": [
+          {
+            "@value": "bakker Kristof maakte speculaaskoeken op 3 december 2020",
+            "@language": "nl"
+          }
+        ],
+        "heeftTijdspanne": "20201203",
+        "werdUitgevoerdDoor": [
+          {
+            "@type": "Persoon",
+            "label": "Persoon",
+            "Agent.contactinfo": [
+              {
+                "@type": "Contactinfo",
+                "Contactinfo.contactnaam": "Bakker Kristof"
+              }
+            ]
+          }
+        ],
+        "maaktGebruikVanSpecifiekObject": {
+          "@type": "Voorstellingsplan",
+          "label": "Voorstellingsplan",
+          "Entiteit.beschrijving": [
+            {
+              "@value": "het recept voor de speculaaskoeken van bakker Kristof",
+              "@language": "nl"
+            }
+          ],
+          "wordtGedocumenteerdIn": [
+            {
+              "@type": "InformatieObject",
+              "label": "Informatieobject",
+              "wordtGedragenDoor": [
+                {
+                  "@type": "MensgemaaktObject",
+                  "label": "Mensgemaakt object",
+                  "MensgemaaktObject.titel": [
+                    {
+                      "@value": "Kristof, het boek",
+                      "@language": "nl"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "realiseert": "https://example.org/bakker-kristof-speculaas"
+        },
+        "isVastgelegdDoor": [
+          {
+            "@type": "Opnamesessie",
+            "label": "Opnamesessie",
+            "heeftTijdspanne": "20201203",
+            "werdUitgevoerdDoor": [
+              {
+                "@type": "Organisatie",
+                "label": "Organisatie",
+                "Organisatie.voorkeursnaam": [
+                  {
+                    "@value": "VRT",
+                    "@language": "nl"
+                  }
+                ]
+              }
+            ],
+            "heeftGemaakt": [
+              {
+                "@type": "Opname",
+                "label": "Opname",
+                "isGedocumenteerdIn": [
+                  {
+                    "@type": "InformatieObject",
+                    "wordtGedragenDoor": [
+                      {
+                        "@type": "MensgemaaktObject",
+                        "label": "Mensgemaakt object"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
