@@ -22,7 +22,6 @@
         "Voorstelling": "frbr:F31",
         "Voorstellingsplan": "E29:Design_or_Procedure",
         "heeftTijdspanne": {
-            "@container": "@set",
             "@id": "crm:P4_has_time-span",
             "@type": "Tijdspanne"
         },
@@ -45,6 +44,10 @@
             "@container": "@set",
             "@id": "crm:P46i_forms_part_of",
             "@type": "Collectie"
+        },
+        "maakteGebruikVanSpecifiekObject": {
+            "@id": "crm:P16_used_specific_object",
+            "@type": "Voorstellingsplan"
         },
         "vondPlaatsOp": {
             "@container": "@set",
