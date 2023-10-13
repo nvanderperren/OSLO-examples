@@ -15,7 +15,7 @@
         "InformatieObject": "crm:E73_Information_Object",
         "Item": "crm:E89_Propositional_Object",
         "Opname": "frbr:F26",
-        "Opanmesessie": "frbr:F29",
+        "Opnamesessie": "frbr:F29",
         "Plaats": "crm:E53_Place",
         "Thema": "crm:E55_Type",
         "Tijdspanne": "crm:E52_Time-Span",
@@ -54,11 +54,11 @@
             "@id": "crm:P16_used_specific_object",
             "@type": "Voorstellingsplan"
         },
-        "realiseert": [{
+        "realiseert": {
             "@container": "@set",
             "@id": "frbr:R35i",
             "@type": "Item"            
-        }],
+        },
         "vondPlaatsOp": {
             "@container": "@set",
             "@id": "crm:P7_took_place_at",
