@@ -21,6 +21,11 @@
         "Tijdspanne": "crm:E52_Time-Span",
         "Voorstelling": "frbr:F31",
         "Voorstellingsplan": "E29:Design_or_Procedure",
+        "heeftGemaakt": {
+            "@container": "@set",
+            "@id": "crm:P94_had_created",
+            "@type": "@id"
+        },
         "heeftTijdspanne": {
             "@id": "crm:P4_has_time-span",
             "@type": "Tijdspanne"
@@ -49,6 +54,11 @@
             "@id": "crm:P16_used_specific_object",
             "@type": "Voorstellingsplan"
         },
+        "realiseert": [{
+            "@container": "@set",
+            "@id": "frbr:R35i",
+            "@type": "Item"            
+        }],
         "vondPlaatsOp": {
             "@container": "@set",
             "@id": "crm:P7_took_place_at",
