@@ -1,0 +1,88 @@
+{
+    "@context": {
+        "crm": "https://cidoc-crm.org/rdfs/7.1.2/CIDOC_CRM_v7.1.2_JSON-LD_Context.jsonld",
+        "frbr": "http://iflastandards.info/ns/fr/frbr/frbroo#",
+        "oslo": "https://data.vlaanderen.be/ns/cultureel-erfgoed/#",
+        "wd": "http://www.wikidata.org/entity/",
+        "wdt": "http://www.wikidata.org/entity/",
+        "Activiteit": "crm:E7_Activity",
+        "Actor": "crm:E39_Actor",
+        "Collectie": "crm:E78_Curated_Holding",
+        "ConceptueelObject": "crm:E28_Conceptual_Object",
+        "Expressie": "frbr:F2",
+        "ExpressieCreatie": "frbr:F28",
+        "MensgemaaktObject": "crm:E22_Man-Made_Object",
+        "InformatieObject": "crm:E73_Information_Object",
+        "Item": "crm:E89_Propositional_Object",
+        "Opname": "frbr:F26",
+        "Opanmesessie": "frbr:F29",
+        "Plaats": "crm:E53_Place",
+        "Thema": "crm:E55_Type",
+        "Tijdspanne": "crm:E52_Time-Span",
+        "Voorstelling": "frbr:F31",
+        "Voorstellingsplan": "E29:Design_or_Procedure",
+        "heeftTijdspanne": {
+            "@container": "@set",
+            "@id": "crm:P4_has_time-span",
+            "@type": "Tijdspanne"
+        },
+        "isExemplarischVoor": {
+            "@container": "@set",
+            "@id": "crm:P137_exemplifies",
+            "@type": "Thema"
+        },
+        "isOnderwerpVan": {
+            "@container": "@set",
+            "@id": "crm:P129i_is_subject_of",
+            "@type": "Activiteit"
+        },
+        "isVastgelegdDoor": {
+            "@container": "@set",
+            "@id": "frbr:R21i",
+            "@type": "Opnamesessie"
+        },
+        "maaktDeelUitVan": {
+            "@container": "@set",
+            "@id": "crm:P46i_forms_part_of",
+            "@type": "Collectie"
+        },
+        "vondPlaatsOp": {
+            "@container": "@set",
+            "@id": "crm:P7_took_place_at",
+            "@type": "Activiteit"
+        },
+        "werdGemaaktDoor": {
+            "@id": "crm:P94i_was_created_by",
+            "@type": "@id"
+        },
+        "werdGemaaktVoor": {
+            "@id": "crm:P16i_was_used_for",
+            "@type": "Voorstelling"
+        },
+        "werdUitgevoerdDoor": {
+            "@container": "@set",
+            "@id": "crm:P14_carried_out_by",
+            "@type": "Actor"
+        },
+        "wordtGedocumenteerdIn": {
+            "@container":"@set",
+            "@id": "crm:P70i_is_documented_in",
+            "@type": "InformatieObject"
+        },
+        "wordtGedragenDoor": {
+            "@container": "@set",
+            "@id": "crm:P128i_is_carried_by",
+            "@type": "MensgemaaktObject"
+        },
+        "wordtUitgedruktDoor": {
+            "@container": "@set",
+            "@id": "frbr:R35",
+            "@type": "Expressie"
+        },
+        "wordtUitgevoerdIn": {
+            "@container": "@set",
+            "@id": "crm:P16i_was_used_for",
+            "@type": "Voorstelling"
+        }
+    }
+}
