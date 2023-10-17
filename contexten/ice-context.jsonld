@@ -1,10 +1,8 @@
 {
-    "@context": {
+    "@context": [
+        {
         "crm": "http://www.cidoc-crm.org/cidoc-crm/",
         "frbr": "http://iflastandards.info/ns/fr/frbr/frbroo#",
-        "oslo": "https://data.vlaanderen.be/ns/cultureel-erfgoed/#",
-        "wd": "http://www.wikidata.org/entity/",
-        "wdt": "http://www.wikidata.org/entity/",
         "Activiteit": "crm:E7_Activity",
         "Actor": "crm:E39_Actor",
         "Collectie": "crm:E78_Curated_Holding",
@@ -97,5 +95,5 @@
             "@id": "crm:P16i_was_used_for",
             "@type": "Voorstelling"
         }
-    }
+    }]
 }

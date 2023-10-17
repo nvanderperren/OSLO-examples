@@ -5,153 +5,149 @@
     "https://raw.githubusercontent.com/nvanderperren/OSLO-samples/master/contexten/ice-context.jsonld",
     {
       "voorkeursnaam": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "label": "http://www.w3.org/2000/01/rdf-schema#label"
+      "label": "http://www.w3.org/2000/01/rdf-schema#label",
+      "id": "@id",
+      "type": "@type",
+      "value": "@value",
+      "language": "@language"
     }
   ],
-  "@type": "Item",
-  "label": "Item",
-  "@id": "https://example.org/bakker-kristof-speculaas",
-  "MensgemaaktObject.titel": [
+  "id": "https://example.org/speculaaskoeken-maken",
+  "type": "Thema",
+  "voorkeursnaam": "speculaaskoeken maken",
+  "isExemplarischVoor": [
     {
-      "@value": "speculaaskoeken zoals bakker Kristof ze maakt",
-      "@language": "nl"
-    }
-  ],
-  "Entiteit.beschrijving": [
-    {
-      "@value": "Bakker Kristof maakt heerlijke speculaas",
-      "@language": "nl"
-    }
-  ],
-  "wordtUitgedruktDoor": [
-    {
-      "@type": "Expressie",
-      "label": "Expressie",
-      "InformatieObject.titel": [
+      "type": "Item",
+      "id": "https://example.org/bakker-kristof-speculaas",
+      "MensgemaaktObject.titel": [
         {
-          "@value": "de speculaasvormen gebruikt door bakker Kristof",
-          "@language": "nl"
+          "value": "speculaaskoeken zoals bakker Kristof ze maakt",
+          "language": "nl"
         }
       ],
-      "wordtGedragenDoor": [
+      "Entiteit.beschrijving": [
         {
-          "@type": "MensgemaaktObject",
-          "label": "Mensgemaakt object",
-          "MensgemaaktObject.titel": "gietvormen voor speculaas",
-          "Entiteit.beschrijving": "deze gietvormen werden gebruikt bij de sessie in het bakkerijmuseum van Veurne waar bakker Kristof speculaas maakte",
-          "maaktDeelUitVan": [
-            {
-              "@type": "Collectie",
-              "label": "Collectie",
-              "GecureerdeCollectie.titel": [
-                {
-                  "@value": "Museumcollectie van het Bakkerijmuseum",
-                  "@language": "nl"
-                }
-              ],
-              "GecureerdeCollectie.curator": [
-                {
-                  "@type": "Persoon",
-                  "label": "Persoon",
-                  "Persoon.voornaam": [
-                    "Kris"
-                  ],
-                  "Persoon.achternaam": "Curator"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "@type": "Expressie",
-      "label": "Expressie",
-      "InformatieObject.titel": [
-        {
-          "@value": "De speculaaskoeken gemaakt door bakker Kristof",
-          "@language": "nl"
+          "value": "Bakker Kristof maakt heerlijke speculaas",
+          "language": "nl"
         }
       ],
-      "wordtUitgevoerdIn": {
-        "@type": "Voorstelling",
-        "label": "Voorstelling",
-        "Entiteit.beschrijving": [
-          {
-            "@value": "bakker Kristof maakte speculaaskoeken op 3 december 2020",
-            "@language": "nl"
-          }
-        ],
-        "heeftTijdspanne": "20201203",
-        "werdUitgevoerdDoor": [
-          {
-            "@type": "Persoon",
-            "label": "Persoon",
-            "Agent.contactinfo": [
-              {
-                "@type": "Contactinfo",
-                "Contactinfo.contactnaam": "Bakker Kristof"
-              }
-            ]
-          }
-        ],
-        "maaktGebruikVanSpecifiekObject": {
-          "@type": "Voorstellingsplan",
-          "label": "Voorstellingsplan",
-          "Entiteit.beschrijving": [
+      "wordtUitgedruktDoor": [
+        {
+          "type": "Expressie",
+          "InformatieObject.titel": [
             {
-              "@value": "het recept voor de speculaaskoeken van bakker Kristof",
-              "@language": "nl"
+              "value": "de speculaasvormen gebruikt door bakker Kristof",
+              "language": "nl"
             }
           ],
-          "wordtGedocumenteerdIn": [
+          "wordtGedragenDoor": [
             {
-              "@type": "InformatieObject",
-              "label": "Informatieobject",
-              "wordtGedragenDoor": [
+              "type": "MensgemaaktObject",
+              "MensgemaaktObject.titel": "gietvormen voor speculaas",
+              "Entiteit.beschrijving": "deze gietvormen werden gebruikt bij de sessie in het bakkerijmuseum van Veurne waar bakker Kristof speculaas maakte",
+              "maaktDeelUitVan": [
                 {
-                  "@type": "MensgemaaktObject",
-                  "label": "Mensgemaakt object",
-                  "MensgemaaktObject.titel": [
+                  "type": "Collectie",
+                  "GecureerdeCollectie.titel": [
                     {
-                      "@value": "Kristof, het boek",
-                      "@language": "nl"
+                      "value": "Museumcollectie van het Bakkerijmuseum",
+                      "language": "nl"
+                    }
+                  ],
+                  "GecureerdeCollectie.curator": [
+                    {
+                      "type": "Persoon",
+                      "Persoon.voornaam": [
+                        "Kris"
+                      ],
+                      "Persoon.achternaam": "Curator"
                     }
                   ]
                 }
               ]
             }
-          ],
-          "realiseert": "https://example.org/bakker-kristof-speculaas"
+          ]
         },
-        "isVastgelegdDoor": [
-          {
-            "@type": "Opnamesessie",
-            "label": "Opnamesessie",
+        {
+          "type": "Expressie",
+          "InformatieObject.titel": [
+            {
+              "value": "De speculaaskoeken gemaakt door bakker Kristof",
+              "language": "nl"
+            }
+          ],
+          "wordtUitgevoerdIn": {
+            "type": "Voorstelling",
+            "Entiteit.beschrijving": [
+              {
+                "value": "bakker Kristof maakte speculaaskoeken op 3 december 2020",
+                "language": "nl"
+              }
+            ],
             "heeftTijdspanne": "20201203",
             "werdUitgevoerdDoor": [
               {
-                "@type": "Organisatie",
-                "label": "Organisatie",
-                "Organisatie.voorkeursnaam": [
+                "type": "Persoon",
+                "Agent.contactinfo": [
                   {
-                    "@value": "VRT",
-                    "@language": "nl"
+                    "type": "Contactinfo",
+                    "Contactinfo.contactnaam": "Bakker Kristof"
                   }
                 ]
               }
             ],
-            "heeftGemaakt": [
+            "maaktGebruikVanSpecifiekObject": {
+              "type": "Voorstellingsplan",
+              "Entiteit.beschrijving": [
+                {
+                  "value": "het recept voor de speculaaskoeken van bakker Kristof",
+                  "language": "nl"
+                }
+              ],
+              "wordtGedocumenteerdIn": [
+                {
+                  "type": "InformatieObject",
+                  "wordtGedragenDoor": [
+                    {
+                      "type": "MensgemaaktObject",
+                      "MensgemaaktObject.titel": [
+                        {
+                          "value": "Kristof, het boek",
+                          "language": "nl"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "realiseert": "https://example.org/bakker-kristof-speculaas"
+            },
+            "isVastgelegdDoor": [
               {
-                "@type": "Opname",
-                "label": "Opname",
-                "isGedocumenteerdIn": [
+                "type": "Opnamesessie",
+                "heeftTijdspanne": "20201203",
+                "werdUitgevoerdDoor": [
                   {
-                    "@type": "InformatieObject",
-                    "wordtGedragenDoor": [
+                    "type": "Organisatie",
+                    "Organisatie.voorkeursnaam": [
                       {
-                        "@type": "MensgemaaktObject",
-                        "label": "Mensgemaakt object"
+                        "value": "VRT",
+                        "language": "nl"
+                      }
+                    ]
+                  }
+                ],
+                "heeftGemaakt": [
+                  {
+                    "type": "Opname",
+                    "isGedocumenteerdIn": [
+                      {
+                        "type": "InformatieObject",
+                        "wordtGedragenDoor": [
+                          {
+                            "type": "MensgemaaktObject"
+                          }
+                        ]
                       }
                     ]
                   }
@@ -159,8 +155,8 @@
               }
             ]
           }
-        ]
-      }
+        }
+      ]
     }
   ]
 }
