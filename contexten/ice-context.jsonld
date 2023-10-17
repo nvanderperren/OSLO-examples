@@ -26,41 +26,41 @@
         },
         "heeftTijdspanne": {
             "@id": "crm:P4_has_time-span",
-            "@type": "Tijdspanne"
+            "@type": "@id"
         },
         "isExemplarischVoor": {
             "@container": "@set",
             "@id": "crm:P137_exemplifies",
-            "@type": "Thema"
+            "@type": "@id"
         },
         "isOnderwerpVan": {
             "@container": "@set",
             "@id": "crm:P129i_is_subject_of",
-            "@type": "Activiteit"
+            "@type": "@id"
         },
         "isVastgelegdDoor": {
             "@container": "@set",
             "@id": "frbr:R21i",
-            "@type": "Opnamesessie"
+            "@type": "@id"
         },
         "maaktDeelUitVan": {
             "@container": "@set",
             "@id": "crm:P46i_forms_part_of",
-            "@type": "Collectie"
+            "@type": "@id"
         },
         "maakteGebruikVanSpecifiekObject": {
             "@id": "crm:P16_used_specific_object",
-            "@type": "Voorstellingsplan"
+            "@type": "@id"
         },
         "realiseert": {
             "@container": "@set",
             "@id": "frbr:R35i",
-            "@type": "Item"            
+            "@type": "@id"            
         },
         "vondPlaatsOp": {
             "@container": "@set",
             "@id": "crm:P7_took_place_at",
-            "@type": "Activiteit"
+            "@type": "@id"
         },
         "werdGemaaktDoor": {
             "@id": "crm:P94i_was_created_by",
@@ -68,32 +68,32 @@
         },
         "werdGemaaktVoor": {
             "@id": "crm:P16i_was_used_for",
-            "@type": "Voorstelling"
+            "@type": "@id"
         },
         "werdUitgevoerdDoor": {
             "@container": "@set",
             "@id": "crm:P14_carried_out_by",
-            "@type": "Actor"
+            "@type": "@id"
         },
         "wordtGedocumenteerdIn": {
             "@container":"@set",
             "@id": "crm:P70i_is_documented_in",
-            "@type": "InformatieObject"
+            "@type": "@id"
         },
         "wordtGedragenDoor": {
             "@container": "@set",
             "@id": "crm:P128i_is_carried_by",
-            "@type": "MensgemaaktObject"
+            "@type": "@id"
         },
         "wordtUitgedruktDoor": {
             "@container": "@set",
             "@id": "frbr:R35",
-            "@type": "Expressie"
+            "@type": "@id"
         },
         "wordtUitgevoerdIn": {
             "@container": "@set",
             "@id": "crm:P16i_was_used_for",
-            "@type": "Voorstelling"
+            "@type": "@id"
         }
     }]
 }
