@@ -15,7 +15,7 @@
     "@type": "MensgemaaktObject",
     "MaterieelDing.beheerder": [{
         "@id": "https://www.wikidata.org/entity/Q2358158",
-        "type": "Organisatie",
+        "@type": "Organisatie",
         "Organisatie.voorkeursnaam": [{
             "@value": "Huis van Alijn",
             "@language": "nl"
