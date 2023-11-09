@@ -4,6 +4,7 @@
             "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/erkendestandaard/2021-04-22/context/cultureel-erfgoed-object-ap.jsonld",
             "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-event/erkendestandaard/2021-04-22/context/cultureel-erfgoed-event-ap.jsonld",
             {
+                "AAT_identifier": "http://wikidata.org/entity/P1014",
                 "crm": "http://www.cidoc-crm.org/cidoc-crm/",
                 "skos": "http://www.w3.org/2004/02/skos/core#",
                 "wiki": "http://www.wikidata.org/entity/"
@@ -22,12 +23,10 @@
                 "Entiteit.identificator": [
                     {
                         "@type": "Identificator",
-                        "Identificator.identificator": [
-                            {
-                                "@value": "wiki:Q2365880",
-                                "@type": "wiki:Q43649390"
-                            }
-                        ],
+                        "Identificator.identificator": {
+                            "@value": "Q2365880",
+                            "@type": "wiki:Q43649390"
+                        },
                         "Identificator.toegekendDoor (string)": "Wikidata"
                     }
                 ]
@@ -36,14 +35,12 @@
         "Entiteit.identificator": [
             {
                 "@type": "Identificator",
-                "Identificator.identificator": [
-                    {
-                        "@value": "1979-C ",
-                        "@type": "wiki:Q1417099"
-                    }
-                ],
+                "Identificator.identificator": {
+                    "@value": "1979-C ",
+                    "@type": "wiki:Q1417099"
+                },
                 "Identificator.toegekendDoor": {
-                    "@id": "wiki:Q2365880",
+                    "@id": "http://www.wikidata.org/entity/Q2365880",
                     "@type": "Organisatie"
                 }
             }
@@ -61,7 +58,7 @@
                                 "@type": "Identificator",
                                 "Identificator.identificator": {
                                     "@value": "300033618",
-                                    "@type": "wiki:P1014"
+                                    "@type": "AAT_identifier"
                                 },
                                 "Identificator.toegekendDoor (string)": "Art & Architecture Thesaurus"
                             }
@@ -121,6 +118,38 @@
         ],
         "MensgemaaktObject.beeldtUit": [
             {
+                "@id": "https://gw.geneanet.org/gounou?lang=fr&pz=auguste&nz=dumont&p=marguerite&n=van+mons",
+                "@type": "Persoon",
+                "Persoon.voornaam": "Marguerite",
+                "Persoon.achternaam": "van Mons",
+                "Entiteit.identificator": [
+                    {
+                        "@type": "Identificator",
+                        "Identificator.identificator": {
+                            "@value": "https://gw.geneanet.org/gounou?lang=nl&pz=auguste&nz=dumont&p=marguerite&n=van+mons",
+                            "@type": "https://schema.org/URL"
+                        },
+                        "Identificator.toegekendDoor (string)": "Geneanet"
+                    }
+                ]
+            },
+            {
+                "@id": "https://www.geonames.org/2797656",
+                "@type": "Entiteit",
+                "skos:prefLabel": "Gent",
+                "Entiteit.type": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Location",
+                "Entiteit.identificator": [
+                    {
+                        "@type": "Identificator",
+                        "Identificator.identificator": {
+                            "@value": "2797656",
+                            "@type": "https://www.wikidata.org/entity/P1566"
+                        },
+                        "Identificator.toegekendDoor (string)": "Geonames"
+                    }
+                ]
+            },
+            {
                 "@id": "https://www.example.org/1234",
                 "@type": "Gebeurtenis",
                 "skos:prefLabel": "De plechtige communie van M",
@@ -146,7 +175,7 @@
                         "@type": "Identificator",
                         "Identificator.identificator": {
                             "@value": "300015050",
-                            "@type": "wiki:P1014"
+                            "@type": "AAT_identifier"
                         },
                         "Identificator.toegekendDoor (string)": "Art & Architecture Thesaurus"
                     }
@@ -187,12 +216,10 @@
                         "Entiteit.identificator": [
                             {
                                 "@type": "Identificator",
-                                "Identificator.identificator": [
-                                    {
-                                        "@value": "300138913",
-                                        "@type": "wiki:P1014"
-                                    }
-                                ],
+                                "Identificator.identificator": {
+                                    "@value": "300138913",
+                                    "@type": "AAT_identifier"
+                                },
                                 "Identificator.toegekendDoor (string)": "Art & Architecture Thesaurus"
                             }
                         ]
@@ -207,12 +234,10 @@
                     "Entiteit.identificator": [
                         {
                             "@type": "Identificator",
-                            "Identificator.identificator": [
-                                {
-                                    "@value": "https://gw.geneanet.org/gounou?lang=fr&n=van+mons&oc=0&p=emile",
-                                    "@type": "https://schema.org/URL"
-                                }
-                            ],
+                            "Identificator.identificator": {
+                                "@value": "https://gw.geneanet.org/gounou?lang=fr&n=van+mons&oc=0&p=emile",
+                                "@type": "https://schema.org/URL"
+                            },
                             "Identificator.toegekendDoor (string)": "Geneanet"
                         }
                     ]
@@ -274,12 +299,10 @@
         "Entiteit.identificator": [
             {
                 "@type": "Identificator",
-                "Identificator.identificator": [
-                    {
-                        "@value": "1979-C ",
-                        "@type": "https://www.wikidata.org/entity/Q1417099"
-                    }
-                ],
+                "Identificator.identificator": {
+                    "@value": "1979-C ",
+                    "@type": "https://www.wikidata.org/entity/Q1417099"
+                },
                 "Identificator.toegekendDoor": {
                     "@type": "Organisatie",
                     "Organisatie.voorkeursnaam": {
@@ -555,12 +578,10 @@
                     "Entiteit.identificator": [
                         {
                             "@type": "Identificator",
-                            "Identificator.identificator": [
-                                {
-                                    "@value": "https://gw.geneanet.org/gounou?lang=fr&n=van+mons&oc=0&p=emile",
-                                    "@type": "https://schema.org/URL"
-                                }
-                            ],
+                            "Identificator.identificator": {
+                                "@value": "https://gw.geneanet.org/gounou?lang=fr&n=van+mons&oc=0&p=emile",
+                                "@type": "https://schema.org/URL"
+                            },
                             "Identificator.toegekendDoor (string)": "Geneanet"
                         }
                     ]
