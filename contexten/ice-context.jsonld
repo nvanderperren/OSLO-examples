@@ -1,6 +1,5 @@
 {
-    "@context": [
-        {
+    "@context": {
         "crm": "http://www.cidoc-crm.org/cidoc-crm/",
         "frbr": "http://iflastandards.info/ns/fr/frbr/frbroo#",
         "Activiteit": "crm:E7_Activity",
@@ -95,5 +94,6 @@
             "@id": "crm:P16i_was_used_for",
             "@type": "@id"
         }
-    }]
+        
+    }
 }

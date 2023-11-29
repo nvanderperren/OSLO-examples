@@ -1,474 +1,473 @@
 {
-    "@context": {
-      "adms": "http://www.w3.org/ns/adms#",
-      "crm": "http://www.cidoc-crm.org/cidoc-crm/",
-      "dct": "http://purl.org/dc/terms/",
-      "edtf": "http://id.loc.gov/datatypes/edtf/",
-      "foaf": "http://xmlns.com/foaf/0.1/",
-      "frbr": "https://www.iflastandards.info/fr/frbr/frbroo#",
-      "locn": "http://www.w3.org/ns/locn#",
-      "oslo-ce": "https://data.vlaanderen.be/ns/cultureel-erfgoed#",
-      "prov": "http://www.w3.org/ns/prov#",
-      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-      "schema": "https://schema.org/",
-      "skos": "http://www.w3.org/2004/02/skos/core#",
-      "xml": "http://www.w3.org/2001/XMLSchema#",
-      "Activiteit": "crm:E7_Activity",
-      "Activiteit.gebruiktObject": {
-        "@container": "@set",
-        "@id": "crm:P16_used_specific_object",
-        "@type": "@id"
-      },
-      "Activiteit.gebruikteTechniek": {
-        "@container": "@set",
-        "@id": "crm:P32_used_general_technique",
-        "@type": "@id"
-      },
-      "Activiteit.uitgevoerdDoor": {
-        "@container": "@set",
-        "@id": "crm:P14_carried_out_by",
-        "@type": "@id"
-      },
-      "Adresvoorstelling": "locn:Address",
-      "Adresvoorstelling.volledigAdres": {
-        "@id": "locn:fullAddress",
-        "@type": "rdf:langString"
-      },
-      "Agent": "dct:Agent",
-      "Agent.contactinfo": {
-        "@container": "@set",
-        "@id": "crm:P76_has_contact_point",
-        "@type": "@id"
-      },
-      "Agent.inBewaringGegeven": {
-        "@container": "@set",
-        "@id": "crm:P28i_surrendered_custody_through",
-        "@type": "@id"
-      },
-      "Agent.inBewaringGekregen": {
-        "@container": "@set",
-        "@id": "crm:P29i_received_custody_through",
-        "@type": "@id"
-      },
-      "Agent.inEigendomGegeven": {
-        "@container": "@set",
-        "@id": "crm:P23i_surrendered_title_through",
-        "@type": "@id"
-      },
-      "Agent.inEigendomGekregen": {
-        "@container": "@set",
-        "@id": "crm:P22i_acquired_title_through",
-        "@type": "@id"
-      },
-      "Agent.residentie": {
-        "@container": "@set",
-        "@id": "crm:P74_has_current_or_former_residence",
-        "@type": "@id"
-      },
-      "Agent.voerdeUit": {
-        "@container": "@set",
-        "@id": "crm:P14i_performed",
-        "@type": "@id"
-      },
-      "Beschrijving": "oslo-ce:Beschrijving",
-      "Beschrijving.tekst": {
-        "@id": "oslo-ce: tekst",
-        "@type": "rdf:langString"
-      },
-      "Beschrijving.type": {
-        "@id": "oslo-ce:type",
-        "@type": "@id"
-      },
-      "Bewaring": "crm:E10_Transfer_of_Custody",
-      "Bewaring.overdrachtVan": {
-        "@container": "@set",
-        "@id": "crm:P30_transferred_custody_of",
-        "@type": "@id"
-      },
-      "Bewaring.overgedragenAan": {
-        "@container": "@set",
-        "@id": "crm:P29_custody_received_by",
-        "@type": "@id"
-      },
-      "Bewaring.overgedragenVan": {
-        "@container": "@set",
-        "@id": "crm:P28_custody_surrendered_by",
-        "@type": "@id"
-      },
-      "Classificatie": "crm:E17_Type_Assignment",
-      "Classificatie.getypeerdeEntiteit": {
-        "@id": "crm:P41_classified",
-        "@type": "@id"
-      },
-      "Classificatie.toegekendType": {
-        "@container": "@set",
-        "@id": "crm:P42_assigned",
-        "@type": "@id"
-      },
-      "Conceptie": "frbr:F27",
-      "Conceptie.werk": {
-        "@container": "@set",
-        "@id": "frbr:R16",
-        "@type": "@id"
-      },
-      "ConceptueelDing": "crm:E28_Conceptual_Object",
-      "Conditie": "crm:E3_Condition_State",
-      "Conditie.nota": {
-        "@container": "@set",
-        "@id": "crm:P3_has_note",
-        "@type": "@id"
-      },
-      "Conditie.periode": {
-        "@id": "crm:P4_has_time-span",
-        "@type": "edtf:EDTF"
-      },
-      "Conditie.type": {
-        "@container": "@set",
-        "@id": "crm:P2_has_type",
-        "@type": "@id"
-      },
-      "Conditiebeoordeling": "crm:E14_Condition_Assessment",
-      "Conditiebeoordeling.conditieVan": {
-        "@container": "@set",
-        "@id": "crm:P34_concerned",
-        "@type": "@id"
-      },
-      "Conditiebeoordeling.vastgesteldeStaat": {
-        "@container": "@set",
-        "@id": "crm:P35_has_identified",
-        "@type": "@id"
-      },
-      "Contactinfo": "schema:ContactPoint",
-      "Contactinfo.adres": {
-        "@id": "locn:address",
-        "@type": "@id"
-      },
-      "Contactinfo.contactnaam": {
-        "@id": "foaf:name",
-        "@type": "xml:string"
-      },
-      "Contactinfo.email": {
-        "@id": "schema:email",
-        "@type": "xml:string"
-      },
-      "Contactinfo.fax": {
-        "@id": "schema:faxNumber",
-        "@type": "xml:string"
-      },
-      "Contactinfo.telefoon": {
-        "@id": "schema:telephone",
-        "@type": "xml:string"
-      },
-      "Contactinfo.website": {
-        "@id": "foaf:page",
-        "@type": "xml:anyURI"
-      },
-      "Creatie": "crm:E65_Creation",
-      "Creatie.creatie": {
-        "@container": "@set",
-        "@id": "crm:P94_has_created",
-        "@type": "@id"
-      },
-      "Curatie": "crm:E87_Curation_Activity",
-      "Curatie.cureerde": {
-        "@container": "@set",
-        "@id": "crm:P147_curated",
-        "@type": "@id"
-      },
-      "Dimensie": "crm:E54_Dimension",
-      "Dimensie.beschrijving": {
-        "@container": "@set",
-        "@id": "crm:P3_has_note",
-        "@type": "@id"
-      },
-      "Dimensie.eenheid": {
-        "@id": "schema:unitText",
-        "@type": "xml:string"
-      },
-      "Dimensie.standaardEenheid": {
-        "@id": "schema:unitCode",
-        "@type": "@id"
-      },
-      "Dimensie.type": {
-        "@id": "crm:P2_has_type",
-        "@type": "@id"
-      },
-      "Dimensie.waarde": {
-        "@id": "schema:value",
-        "@type": "@id"
-      },
-      "Ding": "crm:E70_Thing",
-      "Entiteit": "crm:E1_CRM_Entity",
-      "Entiteit.beschrijving": {
-        "@container": "@set",
-        "@id": "crm:P3_has_note",
-        "@type": "@id"
-      },
-      "Entiteit.identificator": {
-        "@container": "@set",
-        "@id": "adms:identifier",
-        "@type": "@id"
-      },
-      "Entiteit.type": {
-        "@container": "@set",
-        "@id": "crm:P2_has_type",
-        "@type": "@id"
-      },
-      "ExpressieCreatie": "frbr:F28",
-      "ExpressieCreatie.expressie": {
-        "@id": "frbr:R17",
-        "@type": "@id"
-      },
-      "ExpressieCreatie.gerealiseerdWerk": {
-        "@container": "@set",
-        "@id": "frbr:R19",
-        "@type": "@id"
-      },
-      "Gebeurtenis": "crm:E5_Event",
-      "Gebeurtenis.deelnemer": {
-        "@container": "@set",
-        "@id": "crm:P11_had_participant",
-        "@type": "@id"
-      },
-      "Gebeurtenis.plaats": {
-        "@container": "@set",
-        "@id": "crm:P7_took_place_at",
-        "@type": "@id"
-      },
-      "Gebeurtenis.tijd": {
-        "@id": "crm:P4_has_time-span",
-        "@type": "edtf:EDTF"
-      },
-      "GecureerdeCollectie": "crm:E78_Collection",
-      "Getal": "schema:Number",
-      "Identificator": "adms:Identifier",
-      "Identificator.identificator": {
-        "@id": "skos:notation",
-        "@type": "rdfs:Literal"
-      },
-      "Identificator.toegekendDoor": {
-        "@id": "dct:creator",
-        "@type": "@id"
-      },
-      "Identificator.toegekendDoor (string)": {
-        "@id": "adms:schemaAgency",
-        "@type": "xml:string"
-      },
-      "Identificator.toegekendOp": {
-        "@id": "dct:issued",
-        "@type": "xml:dateTime"
-      },
-      "InformatieObject": "crm:E73_Information_Object",
-      "Locatie": "prov:Location",
-      "MaterieelDing": "crm:E18_Physical_Thing",
-      "MensgemaaktKenmerk": "crm:E25_Man-Made_Feature",
-      "MensgemaaktObject": "crm:E22_Man-Made_Object",
-      "Meting": "crm:E16_Measurement",
-      "Meting.gemetenEntiteit": {
-        "@id": "crm:P39_measured",
-        "@type": "@id"
-      },
-      "Meting.vastgesteldeWaarde": {
-        "@container": "@set",
-        "@id": "crm:P40_observed_dimension",
-        "@type": "@id"
-      },
-      "Opname": "frbr:F26",
-      "Opnamesessie": "frbr:F29",
-      "Opnamesessie.gerealiseerdWerk": {
-        "@id": "frbr:R22",
-        "@type": "@id"
-      },
-      "Opnamesessie.opname": {
-        "@container": "@set",
-        "@id": "frbr:R21",
-        "@type": "@id"
-      },
-      "Opnamesessie.opnameVan": {
-        "@container": "@set",
-        "@id": "frbr:R20",
-        "@type": "@id"
-      },
-      "Opnamewerk": "frbr:F21",
-      "Organisatie": "http://www.w3.org/ns/org#Organization",
-      "Organisatie.voorkeursnaam": {
-        "@id": "skos:prefLabel",
-        "@type": "rdf:langString"
-      },
-      "Periode": "edtf:EDTF",
-      "Persoon": "http://www.w3.org/ns/person#Person",
-      "Persoon.achternaam": {
-        "@id": "foaf:familyName",
-        "@type": "xml:string"
-      },
-      "Persoon.voornaam": {
-        "@container": "@set",
-        "@id": "foaf:givenName",
-        "@type": "xml:string"
-      },
-      "Productie": "crm:E12_Production",
-      "Productie.product": {
-        "@container": "@set",
-        "@id": "crm:P108_has_produced",
-        "@type": "@id"
-      },
-      "Publicatie": "frbr:F30",
-      "Publicatie.gerealiseerdWerk": {
-        "@id": "frbr:R23",
-        "@type": "@id"
-      },
-      "Publicatie.publicatieExpressie": {
-        "@container": "@set",
-        "@id": "frbr:R24",
-        "@type": "@id"
-      },
-      "PublicatieExpressie": "frbr:F24",
-      "Publicatiewerk": "frbr:F19",
-      "Rol": "oslo-ce:Rol",
-      "Rol.activiteit": {
-        "@id": "oslo-ce:Rol.activiteit",
-        "@type": "@id"
-      },
-      "Rol.agent": {
-        "@id": "oslo-ce:Rol.agent",
-        "@type": "@id"
-      },
-      "Rol.rol": {
-        "@container": "@set",
-        "@id": "crm:P14.1_in_the_role_of",
-        "@type": "@id"
-      },
-      "StandaardEenheid": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid",
-      "TemporeleEntiteit": "crm:E2_Temporal_Entity",
-      "TemporeleEntiteit.beschrijving": {
-        "@container": "@set",
-        "@id": "crm:P3_has_note",
-        "@type": "@id"
-      },
-      "TemporeleEntiteit.identificator": {
-        "@container": "@set",
-        "@id": "crm:P1_is_identified_by",
-        "@type": "@id"
-      },
-      "TemporeleEntiteit.tijd": {
-        "@id": "crm:P4_has_time-span",
-        "@type": "edtf:EDTF"
-      },
-      "TemporeleEntiteit.type": {
-        "@container": "@set",
-        "@id": "crm:P2_has_type",
-        "@type": "@id"
-      },
-      "Toekenning": "crm:E13_Attribute_Assignment",
-      "Toekenning.toegekendAan": {
-        "@container": "@set",
-        "@id": "crm:P140_assigned_attribute_to",
-        "@type": "@id"
-      },
-      "Toekenning.toegekendAttribuut": {
-        "@container": "@set",
-        "@id": "crm:P177_assigned_property_type",
-        "@type": "xml:anyURI"
-      },
-      "Toekenning.toegekendeWaarde": {
-        "@container": "@set",
-        "@id": "crm:P141_assigned",
-        "@type": "@id"
-      },
-      "ToevoegingDeel": "crm:E79_Part_Addition",
-      "ToevoegingDeel.toegevoegd": {
-        "@container": "@set",
-        "@id": "crm:P111_added",
-        "@type": "@id"
-      },
-      "ToevoegingDeel.uitbreidingVan": {
-        "@container": "@set",
-        "@id": "crm:P110_augmented",
-        "@type": "@id"
-      },
-      "TypeBeschrijving": "skos:Concept",
-      "TypeConditie": "skos:Concept",
-      "TypeEntiteit": "skos:Concept",
-      "TypeGrootheid": "skos:Concept",
-      "TypeMateriaal": "skos:Concept",
-      "TypeRol": "skos:Concept",
-      "TypeTechniek": "skos:Concept",
-      "Verhuis": "crm:E9_Move",
-      "Verhuis.verhuisd": {
-        "@container": "@set",
-        "@id": "crm:P25_moved",
-        "@type": "@id"
-      },
-      "Verhuis.verhuisdNaar": {
-        "@container": "@set",
-        "@id": "crm:P26_moved_to",
-        "@type": "@id"
-      },
-      "Verhuis.verhuisdVan": {
-        "@container": "@set",
-        "@id": "crm:P27_moved_from",
-        "@type": "@id"
-      },
-      "Vernietiging": "crm:E6_Destruction",
-      "Vernietiging.vernietigingVan": {
-        "@container": "@set",
-        "@id": "crm:P13_destroyed",
-        "@type": "@id"
-      },
-      "Verwerving": "crm:E8_Acquisition",
-      "Verwerving.overdrachtVan": {
-        "@container": "@set",
-        "@id": "crm:P24_transferred_title_of",
-        "@type": "@id"
-      },
-      "Verwerving.overgedragenAan": {
-        "@container": "@set",
-        "@id": "crm:P22_transferred_title_to",
-        "@type": "@id"
-      },
-      "Verwerving.overgedragenVan": {
-        "@container": "@set",
-        "@id": "crm:P23_transfered_title_from",
-        "@type": "@id"
-      },
-      "VerwijderingDeel": "crm:E80_Part_Removal",
-      "VerwijderingDeel.inkrimpingVan": {
-        "@container": "@set",
-        "@id": "crm:P112_diminished",
-        "@type": "@id"
-      },
-      "VerwijderingDeel.verwijderd": {
-        "@container": "@set",
-        "@id": "crm:P113_removed",
-        "@type": "@id"
-      },
-      "Voorstelling": "frbr:F31",
-      "Voorstelling.uitgevoerdeVersie": {
-        "@container": "@set",
-        "@id": "frbr:R66",
-        "@type": "@id"
-      },
-      "Voorstelling.volgt": {
-        "@container": "@set",
-        "@id": "frbr:R25",
-        "@type": "@id"
-      },
-      "Voorstellingsplan": "frbr:F25",
-      "Waarde": "oslo-ce:Waarde",
-      "Werk": "frbr:F1",
-      "Wijziging": "crm:E11_Modification",
-      "Wijziging.gebruiktMateriaal": {
-        "@container": "@set",
-        "@id": "crm:P126_employed",
-        "@type": "@id"
-      },
-      "Wijziging.isGewijzigd": {
-        "@container": "@set",
-        "@id": "crm:P31_has_modified",
-        "@type": "@id"
-      },
-      "ZelfstandigeExpressie": "frbr:F22"
-    }
+  "@context": {
+    "adms": "http://www.w3.org/ns/adms#",
+    "crm": "http://www.cidoc-crm.org/cidoc-crm/",
+    "dct": "http://purl.org/dc/terms/",
+    "edtf": "http://id.loc.gov/datatypes/edtf/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "frbr": "https://www.iflastandards.info/fr/frbr/frbroo#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "oslo-ce": "https://data.vlaanderen.be/ns/cultureel-erfgoed#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xml": "http://www.w3.org/2001/XMLSchema#",
+    "Activiteit": "crm:E7_Activity",
+    "Activiteit.gebruiktObject": {
+      "@container": "@set",
+      "@id": "crm:P16_used_specific_object",
+      "@type": "@id"
+    },
+    "Activiteit.gebruikteTechniek": {
+      "@container": "@set",
+      "@id": "crm:P32_used_general_technique",
+      "@type": "@id"
+    },
+    "Activiteit.uitgevoerdDoor": {
+      "@container": "@set",
+      "@id": "crm:P14_carried_out_by",
+      "@type": "@id"
+    },
+    "Adresvoorstelling": "locn:Address",
+    "Adresvoorstelling.volledigAdres": {
+      "@id": "locn:fullAddress",
+      "@type": "rdf:langString"
+    },
+    "Agent": "dct:Agent",
+    "Agent.contactinfo": {
+      "@container": "@set",
+      "@id": "crm:P76_has_contact_point",
+      "@type": "@id"
+    },
+    "Agent.inBewaringGegeven": {
+      "@container": "@set",
+      "@id": "crm:P28i_surrendered_custody_through",
+      "@type": "@id"
+    },
+    "Agent.inBewaringGekregen": {
+      "@container": "@set",
+      "@id": "crm:P29i_received_custody_through",
+      "@type": "@id"
+    },
+    "Agent.inEigendomGegeven": {
+      "@container": "@set",
+      "@id": "crm:P23i_surrendered_title_through",
+      "@type": "@id"
+    },
+    "Agent.inEigendomGekregen": {
+      "@container": "@set",
+      "@id": "crm:P22i_acquired_title_through",
+      "@type": "@id"
+    },
+    "Agent.residentie": {
+      "@container": "@set",
+      "@id": "crm:P74_has_current_or_former_residence",
+      "@type": "@id"
+    },
+    "Agent.voerdeUit": {
+      "@container": "@set",
+      "@id": "crm:P14i_performed",
+      "@type": "@id"
+    },
+    "Beschrijving": "oslo-ce:Beschrijving",
+    "Beschrijving.tekst": {
+      "@id": "oslo-ce: tekst",
+      "@type": "rdf:langString"
+    },
+    "Beschrijving.type": {
+      "@id": "oslo-ce:type",
+      "@type": "@id"
+    },
+    "Bewaring": "crm:E10_Transfer_of_Custody",
+    "Bewaring.overdrachtVan": {
+      "@container": "@set",
+      "@id": "crm:P30_transferred_custody_of",
+      "@type": "@id"
+    },
+    "Bewaring.overgedragenAan": {
+      "@container": "@set",
+      "@id": "crm:P29_custody_received_by",
+      "@type": "@id"
+    },
+    "Bewaring.overgedragenVan": {
+      "@container": "@set",
+      "@id": "crm:P28_custody_surrendered_by",
+      "@type": "@id"
+    },
+    "Classificatie": "crm:E17_Type_Assignment",
+    "Classificatie.getypeerdeEntiteit": {
+      "@id": "crm:P41_classified",
+      "@type": "@id"
+    },
+    "Classificatie.toegekendType": {
+      "@container": "@set",
+      "@id": "crm:P42_assigned",
+      "@type": "@id"
+    },
+    "Conceptie": "frbr:F27",
+    "Conceptie.werk": {
+      "@container": "@set",
+      "@id": "frbr:R16",
+      "@type": "@id"
+    },
+    "ConceptueelDing": "crm:E28_Conceptual_Object",
+    "Conditie": "crm:E3_Condition_State",
+    "Conditie.nota": {
+      "@container": "@set",
+      "@id": "crm:P3_has_note",
+      "@type": "@id"
+    },
+    "Conditie.periode": {
+      "@id": "crm:P4_has_time-span",
+      "@type": "edtf:EDTF"
+    },
+    "Conditie.type": {
+      "@container": "@set",
+      "@id": "crm:P2_has_type",
+      "@type": "@id"
+    },
+    "Conditiebeoordeling": "crm:E14_Condition_Assessment",
+    "Conditiebeoordeling.conditieVan": {
+      "@container": "@set",
+      "@id": "crm:P34_concerned",
+      "@type": "@id"
+    },
+    "Conditiebeoordeling.vastgesteldeStaat": {
+      "@container": "@set",
+      "@id": "crm:P35_has_identified",
+      "@type": "@id"
+    },
+    "Contactinfo": "schema:ContactPoint",
+    "Contactinfo.adres": {
+      "@id": "locn:address",
+      "@type": "@id"
+    },
+    "Contactinfo.contactnaam": {
+      "@id": "foaf:name",
+      "@type": "xml:string"
+    },
+    "Contactinfo.email": {
+      "@id": "schema:email",
+      "@type": "xml:string"
+    },
+    "Contactinfo.fax": {
+      "@id": "schema:faxNumber",
+      "@type": "xml:string"
+    },
+    "Contactinfo.telefoon": {
+      "@id": "schema:telephone",
+      "@type": "xml:string"
+    },
+    "Contactinfo.website": {
+      "@id": "foaf:page",
+      "@type": "xml:anyURI"
+    },
+    "Creatie": "crm:E65_Creation",
+    "Creatie.creatie": {
+      "@container": "@set",
+      "@id": "crm:P94_has_created",
+      "@type": "@id"
+    },
+    "Curatie": "crm:E87_Curation_Activity",
+    "Curatie.cureerde": {
+      "@container": "@set",
+      "@id": "crm:P147_curated",
+      "@type": "@id"
+    },
+    "Dimensie": "crm:E54_Dimension",
+    "Dimensie.beschrijving": {
+      "@container": "@set",
+      "@id": "crm:P3_has_note",
+      "@type": "@id"
+    },
+    "Dimensie.eenheid": {
+      "@id": "schema:unitText",
+      "@type": "xml:string"
+    },
+    "Dimensie.standaardEenheid": {
+      "@id": "schema:unitCode",
+      "@type": "@id"
+    },
+    "Dimensie.type": {
+      "@id": "crm:P2_has_type",
+      "@type": "@id"
+    },
+    "Dimensie.waarde": {
+      "@id": "schema:value",
+      "@type": "@id"
+    },
+    "Ding": "crm:E70_Thing",
+    "Entiteit": "crm:E1_CRM_Entity",
+    "Entiteit.beschrijving": {
+      "@container": "@set",
+      "@id": "crm:P3_has_note",
+      "@type": "@id"
+    },
+    "Entiteit.identificator": {
+      "@container": "@set",
+      "@id": "adms:identifier",
+      "@type": "@id"
+    },
+    "Entiteit.type": {
+      "@container": "@set",
+      "@id": "crm:P2_has_type",
+      "@type": "@id"
+    },
+    "ExpressieCreatie": "frbr:F28",
+    "ExpressieCreatie.expressie": {
+      "@id": "frbr:R17",
+      "@type": "@id"
+    },
+    "ExpressieCreatie.gerealiseerdWerk": {
+      "@container": "@set",
+      "@id": "frbr:R19",
+      "@type": "@id"
+    },
+    "Gebeurtenis": "crm:E5_Event",
+    "Gebeurtenis.deelnemer": {
+      "@container": "@set",
+      "@id": "crm:P11_had_participant",
+      "@type": "@id"
+    },
+    "Gebeurtenis.plaats": {
+      "@container": "@set",
+      "@id": "crm:P7_took_place_at",
+      "@type": "@id"
+    },
+    "Gebeurtenis.tijd": {
+      "@id": "crm:P4_has_time-span",
+      "@type": "edtf:EDTF"
+    },
+    "GecureerdeCollectie": "crm:E78_Collection",
+    "Getal": "schema:Number",
+    "Identificator": "adms:Identifier",
+    "Identificator.identificator": {
+      "@id": "skos:notation",
+      "@type": "rdfs:Literal"
+    },
+    "Identificator.toegekendDoor": {
+      "@id": "dct:creator",
+      "@type": "@id"
+    },
+    "Identificator.toegekendDoor (string)": {
+      "@id": "adms:schemaAgency",
+      "@type": "xml:string"
+    },
+    "Identificator.toegekendOp": {
+      "@id": "dct:issued",
+      "@type": "xml:dateTime"
+    },
+    "InformatieObject": "crm:E73_Information_Object",
+    "Locatie": "prov:Location",
+    "MaterieelDing": "crm:E18_Physical_Thing",
+    "MensgemaaktKenmerk": "crm:E25_Man-Made_Feature",
+    "MensgemaaktObject": "crm:E22_Man-Made_Object",
+    "Meting": "crm:E16_Measurement",
+    "Meting.gemetenEntiteit": {
+      "@id": "crm:P39_measured",
+      "@type": "@id"
+    },
+    "Meting.vastgesteldeWaarde": {
+      "@container": "@set",
+      "@id": "crm:P40_observed_dimension",
+      "@type": "@id"
+    },
+    "Opname": "frbr:F26",
+    "Opnamesessie": "frbr:F29",
+    "Opnamesessie.gerealiseerdWerk": {
+      "@id": "frbr:R22",
+      "@type": "@id"
+    },
+    "Opnamesessie.opname": {
+      "@container": "@set",
+      "@id": "frbr:R21",
+      "@type": "@id"
+    },
+    "Opnamesessie.opnameVan": {
+      "@container": "@set",
+      "@id": "frbr:R20",
+      "@type": "@id"
+    },
+    "Opnamewerk": "frbr:F21",
+    "Organisatie": "http://www.w3.org/ns/org#Organization",
+    "Organisatie.voorkeursnaam": {
+      "@id": "skos:prefLabel",
+      "@type": "rdf:langString"
+    },
+    "Periode": "edtf:EDTF",
+    "Persoon": "http://www.w3.org/ns/person#Person",
+    "Persoon.achternaam": {
+      "@id": "foaf:familyName",
+      "@type": "xml:string"
+    },
+    "Persoon.voornaam": {
+      "@container": "@set",
+      "@id": "foaf:givenName",
+      "@type": "xml:string"
+    },
+    "Productie": "crm:E12_Production",
+    "Productie.product": {
+      "@container": "@set",
+      "@id": "crm:P108_has_produced",
+      "@type": "@id"
+    },
+    "Publicatie": "frbr:F30",
+    "Publicatie.gerealiseerdWerk": {
+      "@id": "frbr:R23",
+      "@type": "@id"
+    },
+    "Publicatie.publicatieExpressie": {
+      "@container": "@set",
+      "@id": "frbr:R24",
+      "@type": "@id"
+    },
+    "PublicatieExpressie": "frbr:F24",
+    "Publicatiewerk": "frbr:F19",
+    "Rol": "oslo-ce:Rol",
+    "Rol.activiteit": {
+      "@id": "oslo-ce:Rol.activiteit",
+      "@type": "@id"
+    },
+    "Rol.agent": {
+      "@id": "oslo-ce:Rol.agent",
+      "@type": "@id"
+    },
+    "Rol.rol": {
+      "@container": "@set",
+      "@id": "crm:P14.1_in_the_role_of",
+      "@type": "@id"
+    },
+    "StandaardEenheid": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid",
+    "TemporeleEntiteit": "crm:E2_Temporal_Entity",
+    "TemporeleEntiteit.beschrijving": {
+      "@container": "@set",
+      "@id": "crm:P3_has_note",
+      "@type": "@id"
+    },
+    "TemporeleEntiteit.identificator": {
+      "@container": "@set",
+      "@id": "crm:P1_is_identified_by",
+      "@type": "@id"
+    },
+    "TemporeleEntiteit.tijd": {
+      "@id": "crm:P4_has_time-span",
+      "@type": "edtf:EDTF"
+    },
+    "TemporeleEntiteit.type": {
+      "@container": "@set",
+      "@id": "crm:P2_has_type",
+      "@type": "@id"
+    },
+    "Toekenning": "crm:E13_Attribute_Assignment",
+    "Toekenning.toegekendAan": {
+      "@container": "@set",
+      "@id": "crm:P140_assigned_attribute_to",
+      "@type": "@id"
+    },
+    "Toekenning.toegekendAttribuut": {
+      "@container": "@set",
+      "@id": "crm:P177_assigned_property_type",
+      "@type": "xml:anyURI"
+    },
+    "Toekenning.toegekendeWaarde": {
+      "@container": "@set",
+      "@id": "crm:P141_assigned",
+      "@type": "@id"
+    },
+    "ToevoegingDeel": "crm:E79_Part_Addition",
+    "ToevoegingDeel.toegevoegd": {
+      "@container": "@set",
+      "@id": "crm:P111_added",
+      "@type": "@id"
+    },
+    "ToevoegingDeel.uitbreidingVan": {
+      "@container": "@set",
+      "@id": "crm:P110_augmented",
+      "@type": "@id"
+    },
+    "TypeBeschrijving": "skos:Concept",
+    "TypeConditie": "skos:Concept",
+    "TypeEntiteit": "skos:Concept",
+    "TypeGrootheid": "skos:Concept",
+    "TypeMateriaal": "skos:Concept",
+    "TypeRol": "skos:Concept",
+    "TypeTechniek": "skos:Concept",
+    "Verhuis": "crm:E9_Move",
+    "Verhuis.verhuisd": {
+      "@container": "@set",
+      "@id": "crm:P25_moved",
+      "@type": "@id"
+    },
+    "Verhuis.verhuisdNaar": {
+      "@container": "@set",
+      "@id": "crm:P26_moved_to",
+      "@type": "@id"
+    },
+    "Verhuis.verhuisdVan": {
+      "@container": "@set",
+      "@id": "crm:P27_moved_from",
+      "@type": "@id"
+    },
+    "Vernietiging": "crm:E6_Destruction",
+    "Vernietiging.vernietigingVan": {
+      "@container": "@set",
+      "@id": "crm:P13_destroyed",
+      "@type": "@id"
+    },
+    "Verwerving": "crm:E8_Acquisition",
+    "Verwerving.overdrachtVan": {
+      "@container": "@set",
+      "@id": "crm:P24_transferred_title_of",
+      "@type": "@id"
+    },
+    "Verwerving.overgedragenAan": {
+      "@container": "@set",
+      "@id": "crm:P22_transferred_title_to",
+      "@type": "@id"
+    },
+    "Verwerving.overgedragenVan": {
+      "@container": "@set",
+      "@id": "crm:P23_transfered_title_from",
+      "@type": "@id"
+    },
+    "VerwijderingDeel": "crm:E80_Part_Removal",
+    "VerwijderingDeel.inkrimpingVan": {
+      "@container": "@set",
+      "@id": "crm:P112_diminished",
+      "@type": "@id"
+    },
+    "VerwijderingDeel.verwijderd": {
+      "@container": "@set",
+      "@id": "crm:P113_removed",
+      "@type": "@id"
+    },
+    "Voorstelling": "frbr:F31",
+    "Voorstelling.uitgevoerdeVersie": {
+      "@container": "@set",
+      "@id": "frbr:R66",
+      "@type": "@id"
+    },
+    "Voorstelling.volgt": {
+      "@container": "@set",
+      "@id": "frbr:R25",
+      "@type": "@id"
+    },
+    "Voorstellingsplan": "frbr:F25",
+    "Waarde": "oslo-ce:Waarde",
+    "Werk": "frbr:F1",
+    "Wijziging": "crm:E11_Modification",
+    "Wijziging.gebruiktMateriaal": {
+      "@container": "@set",
+      "@id": "crm:P126_employed",
+      "@type": "@id"
+    },
+    "Wijziging.isGewijzigd": {
+      "@container": "@set",
+      "@id": "crm:P31_has_modified",
+      "@type": "@id"
+    },
+    "ZelfstandigeExpressie": "frbr:F22"
   }
-  
+}

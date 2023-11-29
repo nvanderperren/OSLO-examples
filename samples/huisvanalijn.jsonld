@@ -1,100 +1,283 @@
 {
-    "@context": [
-        "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-event/erkendestandaard/2021-04-22/context/cultureel-erfgoed-event-ap.jsonld",
-        "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/erkendestandaard/2021-04-22/context/cultureel-erfgoed-object-ap.jsonld",
-        {
-            "Agent.rol": {
-                "@container": "@set",
-                "@id": "Rol.rol",
-                "@type": "@id"
-            },
-            "voorkeursnaam": "http://www.w3.org/2004/02/skos/core#prefLabel"
-        }
-    ],
-    "@id": "is er een PID voor dit object?",
-    "@type": "MensgemaaktObject",
-    "MaterieelDing.beheerder": [{
-        "@id": "https://www.wikidata.org/entity/Q2358158",
-        "@type": "Organisatie",
-        "Organisatie.voorkeursnaam": [{
-            "@value": "Huis van Alijn",
-            "@language": "nl"
-        }],
-        "Entiteit.identificator": [{
-            "@type": "Identificator",
-            "Identificator.identificator": {
-                "@value": "https://www.wikidata.org/entity/Q2358158",
-                "@type": "https://www.wikidata.org/entity/Q43649390"
-            }
-        }]
-    }],
-    "MensgemaaktObject.maaktDeelUitVan": [{
-        "@type": "GecureerdeCollectie",
-        "Collectie.naam": [{
-            "@value": "Poppenspel",
-            "@language": "nl"
-        }]
-    }],
-    "Entiteit.identificator": {
-        "@type": "Identificator",
-        "Identificator.identificator": {
-            "@value": "2022-029-193",
-            "@type": "https://www.wikidata.org/entity/Q1417099"
-        }
-    },
-    "Entiteit.classificatie": [{
-        "@type": "Classificatie",
-        "Classificatie.toegekendType": [{
-            "@type": "TypeEntiteit",
-            "@id": "http://vocab.getty.edu/page/aat/300226128",
-            "voorkeursnaam": {
-                "@value": "stokpoppen",
-                "@language": "nl"
-            }
-        }]
-    }],
-    "MensgemaaktObject.titel": [{
-        "@value": "Stokpop met masker en rode lingerie",
-        "@language": "nl"
-    }],
-    "Entiteit.beschrijving": [{
-        "@value": "Don G. is een muziekvoorstelling van Theater Taptoe uit 2006. Als artistiek leider legt Freek Neirynck voornamelijk de focus op teksttheater. Na zijn vertrek in 2003 nemen Luk De Bruyker en Dirk De Strooper de artistieke                         leiding over. In die periode wordt alsmaar meer voor muziektheater gekozen, deels uit interesse, deels onder druk van toenmalig minister van cultuur Bert Anciaux die wil dat Taptoe zich herbront. Don G. is de eerste in een lange reeks samenwerkingen met blazersensemble I Solisti del Vento. Het stuk Don G. is een bewerking van de opera Don Giovanni van Wolfgang Amadeus Mozart. Het stuk wordt ingekort en de locatie verplaatst naar het Venetië van Casanova en Pulcinella, met de personages Don Giovanni en Leporello.",
-        "@language": "nl"
-    }],
-    "MaterieelDing.productie": {
-        "@type": "Productie",
-        "Activiteit.uitgevoerdDoor": [{
-            "@id": "http://www.wikidata.org/entity/Q47208588",
-            "@type": "Persoon",
-            "Persoon.achternaam": "De Bruyker",
-            "Persoon.voornaam": "Luk",
-            "Agent.rol": [{
-                "@type": "TypeRol",
-                "@id": "https://id/vewijst/naar/thesaurus",
-                "voorkeursnaam": {
-                    "@value": "ontwerper",
-                    "@language": "nl"
-                }
-            }]
-        },{
-            "@id": "https://www.wikidata.org/entity/Q52185469",
-            "@type": "Persoon",
-            "Persoon.achternaam": "De Strooper",
-            "Persoon.voornaam": "Dirk",
-            "Agent.rol": [{
-                "@type": "TypeRol",
-                "@id": "https:///id/verwijst/naar/thesaurus",
-                "voorkeursnaam": {
-                    "@value": "ontwerper",
-                    "@language": "nl"
-                }
-            }]
-        }],
-        "Gebeurtenis.tijd": "2008",
-        "Gebeurtenis.plaats": {
-            "@type": "Locatie",
-            "@value": "Gent"
-        }
+  "@context": [
+    "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-event/erkendestandaard/2021-04-22/context/cultureel-erfgoed-event-ap.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/erkendestandaard/2021-04-22/context/cultureel-erfgoed-object-ap.jsonld",
+    {
+      "skos": "http://www.w3.org/2004/02/skos/core#"
     }
-    
+  ],
+  "@id": "https://pid/voor/dit/object",
+  "@type": "MensgemaaktObject",
+  "MaterieelDing.beheerder": [{
+      "@id": "https://www.wikidata.org/entity/Q2358158",
+      "@type": "Organisatie",
+      "Organisatie.voorkeursnaam": [{
+          "@value": "Huis van Alijn",
+          "@language": "nl"
+        }]
+    }
+  ],
+  "MensgemaaktObject.maaktDeelUitVan": [{
+      "@type": "GecureerdeCollectie",
+      "Collectie.naam": [{
+          "@value": "Poppenspel",
+          "@language": "nl"
+        }]
+    }
+  ],
+  "Entiteit.identificator": [{
+      "@type": "Identificator",
+      "Identificator.identificator": {
+        "@value": "2022-029-193",
+        "@type": "https://stad.gent/id/identificatiesysteem/priref"
+      }
+    }
+  ],
+  "MensgemaaktObject.locatie": {
+    "@value": "Ghe_B_04_07_03_b/ALIJN_01056",
+    "@type": "Locatie"
+  },
+  "Entiteit.classificatie": [{
+      "@type": "Classificatie",
+      "Classificatie.toegekendType": [{
+          "@id": "http://vocab.getty.edu/page/aat/300226128",
+          "@type": "TypeEntiteit",
+          "skos:prefLabel": [{
+              "@value": "stokpoppen",
+              "@language": "nl"
+            }]
+        }]
+    }
+  ],
+  "MensgemaaktObject.titel": [{
+      "@value": "Stokpop met masker en rode lingerie",
+      "@language": "nl"
+    }
+  ],
+  "Entiteit.beschrijving": [{
+      "@value": "Don G. is een muziekvoorstelling van Theater Taptoe uit 2006. Als artistiek leider legt Freek Neirynck voornamelijk de focus op teksttheater. Na zijn vertrek in 2003 nemen Luk De Bruyker en Dirk De Strooper de artistieke leiding over. In die periode wordt alsmaar meer voor muziektheater gekozen, deels uit interesse, deels onder druk van toenmalig minister van cultuur Bert Anciaux die wil dat Taptoe zich herbront. Don G. is de eerste in een lange reeks samenwerkingen met blazersensemble I Solisti del Vento. Het stuk Don G. is een bewerking van de opera Don Giovanni van Wolfgang Amadeus Mozart. Het stuk wordt ingekort en de locatie verplaatst naar het Venetië van Casanova en Pulcinella, met de personages Don Giovanni en Leporello.",
+      "@language": "nl"
+    }
+  ],
+  "MensgemaaktObject.draagt": [
+    {
+      "@type": "ZelfstandigeExpressie",
+      "ZelfstandigeExpressie.creatie": [{
+          "@type": "ExpressieCreatie",
+          "Activiteit.uitgevoerdDoor": [{
+              "@id": "http://www.wikidata.org/entity/Q47208588",
+              "@type": "Persoon",
+              "Persoon.achternaam": "De Bruyker",
+              "Persoon.voornaam": "Luk",
+              "@reverse": {
+                "Rol.rol": [{
+                    "@id": "https://id/vewijst/naar/thesaurus",
+                    "@type": "TypeRol",
+                    "skos:prefLabel": [{
+                        "@value": "ontwerper",
+                        "@language": "nl"
+                      }]
+                  }]
+              }
+            },{
+              "@id": "https://www.wikidata.org/entity/Q52185469",
+              "@type": "Persoon",
+              "Persoon.achternaam": "De Strooper",
+              "Persoon.voornaam": "Dirk",
+              "@reverse": {
+                "Rol.rol": [{
+                    "@id": "https:///id/verwijst/naar/thesaurus",
+                    "@type": "TypeRol",
+                    "skos:prefLabel": [{
+                        "@value": "ontwerper",
+                        "@language": "nl"
+                      }]
+                  }]
+              }}
+          ],
+          "Gebeurtenis.tijd": "2006",
+          "Gebeurtenis.plaats": [{
+              "@value": "Gent",
+              "@type": "Locatie"
+            }]
+        }
+      ],
+      "Entiteit.classificatie": [{
+          "@type": "Classificatie",
+          "Classificatie.toegekendType": [{
+              "@id": "https://www.wikidata.org/entity/Q52219007",
+              "@type": "TypeEntiteit",
+              "skos:prefLabel": [{
+                  "@value": "Theater Taptoe",
+                  "@language": "nl"
+                }]
+            },{
+              "@id": "https://www.wikidata.org/entity/Q254",
+              "@type": "TypeEntiteit",
+              "skos:prefLabel": [{
+                  "@value": "Wolfgang Amadeus Mozart",
+                  "@language": "nl"
+                }]
+            },{
+              "@id": "https://data.kunsten.be/productions/don-g",
+              "@type": "TypeEntiteit",
+              "skos:prefLabel": [{
+                  "@value": "Don G.",
+                  "@language": "nl"
+                }]
+            },{
+              "@id": "http://vocab.getty.edu/page/aat/300248147",
+              "@type": "TypeEntiteit",
+              "skos:prefLabel": [{
+                  "@value": "Poppenspel",
+                  "@language": "nl"
+                }]
+            },{
+              "@id": "http://vocab.getty.edu/tgn/7007887",
+              "@type": "TypeEntiteit",
+              "skos:prefLabel": [{
+                  "@value": "Gent",
+                  "@language": "nl"
+                }]
+            },{
+              "@id": "https://www.wikidata.org/entity/Q35024",
+              "@type": "TypeEntiteit",
+              "skos:prefLabel": [{
+                  "@value": "jaren 2000",
+                  "@language": "nl"
+                }]
+            }]
+        }
+      ],
+      "InformatieObject.verwijstNaar": [{
+          "@id": "https://pid/voor/verwijzend/object",
+          "@type": "MensgemaaktObject",
+          "Entiteit.identificator": [{
+              "@type": "Identificator",
+              "Identificator.identificator": {
+                "@value": "2002-127-195",
+                "@type": "https://stad.gent/id/identificatiesysteem/priref"
+              }
+            }]
+        }
+      ],
+      "ZelfstandigeExpressie.realiseert": {
+        "@id": "https://data.kunsten.be/productions/don-g",
+        "@type": "Voorstellingswerk",
+        "Werk.titel": [{
+            "@value": "Don G.",
+            "@language": "nl"
+          }
+        ],
+        "Werk.afgeleidVan": [{
+            "@id": "https://www.wikidata.org/wiki/Q192039",
+            "@type": "Werk",
+            "Werk.titel": [{
+                "@value": "Don Juan",
+                "@language": "nl"
+              }]
+          }
+        ],
+        "@reverse": {
+          "Voorstelling.uitgevoerdeVersie": [{
+              "@id": "https://uri/van/voorstelling",
+              "@type": "Voorstelling"
+            }]
+        }
+      }
+    }
+  ],
+  "MensgemaaktObject.materiaal": [{
+      "@id": "https://vocab.getty.edu/aat/300015050",
+      "@type": "TypeMateriaal",
+      "skos:prefLabel": [{
+          "@value": "olieverf",
+          "@language": "nl"
+        }]
+    }
+  ],
+  "MensgemaaktObject.dimensie": [{
+      "@type": "Dimensie",
+      "Dimensie.type": {
+        "@id": "https://vocab.getty.edu/aat/300055645",
+        "@type": "TypeGrootheid",
+        "skos:prefLabel": [{
+            "@value": "lengte",
+            "@language": "nl"
+          }]
+      },
+      "Dimensie.waarde": 89.5,
+      "Dimensie.eenheid": "cm"
+    },{
+      "@type": "Dimensie",
+      "Dimensie.type": {
+        "@id": "https://vocab.getty.edu/aat/300055647",
+        "@type": "TypeGrootheid",
+        "skos:prefLabel": [{
+            "@value": "breedte",
+            "@language": "nl"
+          }]
+      },
+      "Dimensie.waarde": 89.5,
+      "Dimensie.eenheid": "cm"
+    }
+  ],
+  "Entiteit.wordtVoorgesteldDoor": [
+    {
+      "@type": "VisueelItem",
+      "Entiteit.identificator": [{
+          "@type": "Identificator",
+          "Identificator.identificator": {
+            "@value": "https://url/naar/beeld",
+            "@type": "https://schema.org/url"
+          }
+        }]
+    }
+  ],
+  "MensgemaaktObject.beeldtUit": [
+    {
+      "@id": "https://uri/voor/deze/persoon",
+      "@type": "Persoon",
+      "Persoon.voornaam": "een voornaam",
+      "Persoon.achternaam": "een achternaam"
+    },{
+      "@id": "https://uri/voor/deze/organisatie",
+      "@type": "Organisatie",
+      "Organisatie.voorkeursnaam": "Deze toffe Organisatie"
+    },{
+      "@id": "https://uri/voor/dit/object",
+      "@type": "MensgemaaktObject",
+      "MensgemaaktObject.titel": [{
+          "@value": "een object",
+          "@language": "nl"
+        }]
+    },{
+      "@id": "https://uri/voor/locatie",
+      "@type": "Entiteit",
+      "Entiteit.type": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Location",
+      "skos:prefLabel": [{
+          "@value": "deze locatie",
+          "@language": "nl"
+        }]
+    }
+  ],
+  "WettelijkObject.isOnderworpenAan": [
+    {
+      "@type": "Recht",
+      "Recht.type": [{
+          "@id": "https://rightsstatements.org/page/InC/1.0/",
+          "skos:prefLabel": [{
+              "@value": "Auteursrecht",
+              "@language": "nl"
+            }]
+        }
+      ],
+      "Entiteit.identificator": [{
+          "@type": "Identificator",
+          "Identificator.identificator": {
+            "@value": "https://rightsstatements.org/page/InC/1.0/",
+            "@type": "https://www.wikidata.org/wiki/Q47530706"
+          }
+        }]
+    }]
 }
