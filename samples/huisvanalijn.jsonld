@@ -278,6 +278,12 @@
             "@value": "https://rightsstatements.org/page/InC/1.0/",
             "@type": "https://www.wikidata.org/wiki/Q47530706"
           }
-        }]
+        }],
+        "@reverse": {
+          "Activiteit.gebruiktObject": [{
+            "@id": "https://uri/van/voorstelling",
+            "@type": "Voorstelling"
+          }]
+        }
     }]
 }
